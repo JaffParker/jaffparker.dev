@@ -6,12 +6,22 @@ import Helmet from 'react-helmet'
 import { Logo } from '../components/Logo'
 import { graphql } from 'gatsby'
 import GatsbyImage from 'gatsby-image'
+import { Icon as FAIcon } from '../components/Icon'
+import faTwitter from '@fortawesome/fontawesome-free-brands/faTwitter'
+import faLinkedin from '@fortawesome/fontawesome-free-brands/faLinkedin'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope'
 
 const Container = styled.div`
   ${tw`h-screen w-screen flex justify-center items-center flex-col`}
 `
 const Image = styled(GatsbyImage)`
   ${tw`w-64 h-64 m-4 rounded-full`}
+`
+const IconContainer = styled.section`
+  ${tw`h-auto m-4`}
+`
+const Icon = styled(FAIcon)`
+  ${tw`m-1 text-3xl text-grey-darkest hover:text-blue`}
 `
 
 export default ({
@@ -28,6 +38,20 @@ export default ({
     <Container>
       <Image fluid={logoFluid} />
       <Logo />
+      <IconContainer>
+        <a href="https://twitter.com/jaffparker" target="_blank">
+          <Icon icon={faTwitter} />
+        </a>
+        <a href="https://www.linkedin.com/in/andreykamozin/" target="_blank">
+          <Icon icon={faLinkedin} />
+        </a>
+        <a
+          href="mailto:andreykamozin@gmail.com?subject=Hi%20from%20the%20website!"
+          target="_blank"
+        >
+          <Icon icon={faEnvelope} />
+        </a>
+      </IconContainer>
     </Container>
   </Fragment>
 )
