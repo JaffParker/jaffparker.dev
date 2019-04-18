@@ -23,6 +23,10 @@ const IconContainer = styled.section`
 const Icon = styled(FAIcon)`
   ${tw`m-1 text-3xl text-grey-darkest hover:text-blue`}
 `
+// const Divider = styled.hr`
+//   ${tw`w-32 mb-6 bg-grey`}
+//   height: 1px;
+// `
 
 export default ({
   data: {
@@ -39,15 +43,24 @@ export default ({
       <Image fluid={logoFluid} />
       <Logo />
       <IconContainer>
-        <a href="https://twitter.com/jaffparker" target="_blank">
+        <a
+          href="https://twitter.com/jaffparker"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Icon icon={faTwitter} />
         </a>
-        <a href="https://www.linkedin.com/in/andreykamozin/" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/andreykamozin/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Icon icon={faLinkedin} />
         </a>
         <a
           href="mailto:andreykamozin@gmail.com?subject=Hi%20from%20the%20website!"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <Icon icon={faEnvelope} />
         </a>
